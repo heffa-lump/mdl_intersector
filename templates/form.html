@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MDL Cast List Intersector</title>
+    <link rel="stylesheet" type="text/css" href="/static/form.css">
+    <script type="text/javascript" src="/static/form.js"></script>
+</head>
+<body>
+    <h1>Cast List Intersector</h1>
+    <form method="post" id="inputForm">
+        <label for="target_drama">Target Drama Page</label>
+        <br>
+        <input type="url" name="target_drama" id="target_drama" placeholder="Example: https://mydramalist.com/683119-shao-nian-ge-xing" required/>
+        <br>
+        <br>
+        <label for="user_list">User Profile</label>
+        <br>
+        <input type="url" name="user_list" id="user_list" placeholder="Example: https://mydramalist.com/dramalist/mxticktock/completed" required/>
+        <br>
+        <input type="checkbox" name="pleaseSpoiler">
+        <label for="pleaseSpoiler">Hide character names for current drama</label>
+        <br>
+        <br>
+        <input type="submit" value="Find common actors" onclick="submitForm(event, document)">
+    </form>
+
+    <div class="intersections">    
+        <h3>Results</h3>
+        <div id="results"></div>
+    </div>
+</body>
+</html>

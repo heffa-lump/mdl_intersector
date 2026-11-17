@@ -1,0 +1,26 @@
+{% if pleaseSpoiler %}
+<p align="center">Hover over bars to unspoiler</p>
+{% endif %}
+
+{% for actor in result_actors %}
+    <div class="actor">
+        <p class="actor_name">{{actor.name}}</p>
+        <p class="role">
+            <em>{{actor.roles[0].work.name}}</em>: 
+            {% if pleaseSpoiler %}
+                <span class="spoiler">
+            {% endif %}
+                {{actor.roles[0].character_name}} 
+                ({{actor.roles[0].type}})
+            {% if pleaseSpoiler %}
+                </span>
+            {% endif %}
+        </p>
+        {% for role in actor.roles[1:] %}
+        <p class="role">
+            <em>{{role.work.name}}</em>: 
+            {{role.character_name}} ({{role.type}})
+        </p>
+        {% endfor %}
+    </div>
+{% endfor %}

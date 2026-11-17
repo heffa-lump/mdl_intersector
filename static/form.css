@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    padding: 10px;
+}
+
+input[type=url] {
+    width: min(40em, 80vw);
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.intersections {
+    padding: 10px;
+}
+
+.actor_name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.role {
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.spoiler {
+    background-color: black;
+    color: black;
+    transition: background-color 0.3s, color 0.3s
+}
+
+.spoiler:hover {
+    background-color: white;
+    color: black;
+}
